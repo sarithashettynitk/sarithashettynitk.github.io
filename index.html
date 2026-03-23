@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Saritha R Shetty | Academic Administration Specialist</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #faf8f4;
+    --warm-white: #f5f2ec;
+    --ink: #1a1714;
+    --brown: #6b4c35;
+    --gold: #c9972c;
+    --muted: #8a7d72;
+    --border: #e2dbd3;
+    --accent-bg: #f0ebe3;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--ink);
+    font-size: 15px;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  /* ── NOISE TEXTURE OVERLAY ── */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.4;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 4rem;
+    background: rgba(250, 248, 244, 0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .nav-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    color: var(--ink);
+    text-decoration: none;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-size: 0.8rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--brown); }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 80px;
+  }
+
+  .hero-left {
+    padding: 8rem 4rem 4rem 6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 0;
+    transform: translateX(-30px);
+    animation: slideIn 0.9s ease forwards 0.2s;
+  }
+
+  .hero-tag {
+    display: inline-block;
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    border: 1px solid var(--gold);
+    padding: 0.3rem 0.8rem;
+    margin-bottom: 2rem;
+    width: fit-content;
+  }
+
+  .hero-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(3rem, 6vw, 5.5rem);
+    font-weight: 300;
+    line-height: 1.05;
+    color: var(--ink);
+    margin-bottom: 0.3rem;
+  }
+
+  .hero-name em {
+    font-style: italic;
+    color: var(--brown);
+  }
+
+  .hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--muted);
+    margin-bottom: 2rem;
+    font-style: italic;
+  }
+
+  .hero-desc {
+    font-size: 0.92rem;
+    color: var(--muted);
+    max-width: 440px;
+    line-height: 1.8;
+    margin-bottom: 3rem;
+  }
+
+  .hero-cta {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    display: inline-block;
+    background: var(--brown);
+    color: white;
+    padding: 0.85rem 2rem;
+    font-size: 0.78rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.2s;
+  }
+
+  .btn-primary:hover { background: var(--ink); transform: translateY(-2px); }
+
+  .btn-secondary {
+    display: inline-block;
+    border: 1px solid var(--border);
+    color: var(--ink);
+    padding: 0.85rem 2rem;
+    font-size: 0.78rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+
+  .btn-secondary:hover { border-color: var(--brown); color: var(--brown); transform: translateY(-2px); }
+
+  .hero-right {
+    position: relative;
+    background: var(--accent-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards 0.5s;
+  }
+
+  .hero-right::before {
+    content: '';
+    position: absolute;
+    top: -50px; right: -50px;
+    width: 300px; height: 300px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(201,151,44,0.12) 0%, transparent 70%);
+  }
+
+  .hero-photo-frame {
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-photo-frame::before {
+    content: '';
+    position: absolute;
+    top: -12px; left: -12px;
+    right: 12px; bottom: 12px;
+    border: 1px solid var(--gold);
+    z-index: -1;
+  }
+
+  .hero-photo {
+    width: 320px;
+    height: 400px;
+    object-fit: cover;
+    object-position: top;
+    display: block;
+    filter: sepia(10%) contrast(1.05);
+  }
+
+  .hero-stats {
+    position: absolute;
+    bottom: 3rem;
+    left: 3rem;
+    display: flex;
+    gap: 2.5rem;
+  }
+
+  .stat-item { text-align: left; }
+
+  .stat-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: var(--brown);
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-top: 0.3rem;
+  }
+
+  /* ── SECTIONS ── */
+  section {
+    padding: 6rem 6rem;
+    border-top: 1px solid var(--border);
+  }
+
+  .section-header {
+    display: flex;
+    align-items: baseline;
+    gap: 1.5rem;
+    margin-bottom: 4rem;
+  }
+
+  .section-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.85rem;
+    color: var(--gold);
+    font-style: italic;
+  }
+
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.8rem, 3vw, 2.8rem);
+    font-weight: 300;
+    color: var(--ink);
+  }
+
+  .section-title em {
+    font-style: italic;
+    color: var(--brown);
+  }
+
+  /* ── ABOUT ── */
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 6rem;
+    align-items: start;
+  }
+
+  .about-text p {
+    font-size: 0.95rem;
+    color: var(--muted);
+    margin-bottom: 1.5rem;
+    line-height: 1.9;
+  }
+
+  .about-text p strong {
+    color: var(--ink);
+    font-weight: 500;
+  }
+
+  .skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-top: 2rem;
+  }
+
+  .skill-tag {
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.4rem 0.9rem;
+    border: 1px solid var(--border);
+    color: var(--muted);
+    background: var(--warm-white);
+    transition: border-color 0.2s, color 0.2s;
+  }
+
+  .skill-tag:hover { border-color: var(--brown); color: var(--brown); }
+
+  .about-highlights {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .highlight-card {
+    padding: 1.8rem;
+    background: var(--warm-white);
+    border-left: 3px solid var(--gold);
+    transition: transform 0.2s;
+  }
+
+  .highlight-card:hover { transform: translateX(4px); }
+
+  .highlight-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--brown);
+    line-height: 1;
+  }
+
+  .highlight-desc {
+    font-size: 0.82rem;
+    color: var(--muted);
+    margin-top: 0.3rem;
+    line-height: 1.6;
+  }
+
+  /* ── EXPERIENCE ── */
+  #experience { background: var(--warm-white); }
+
+  .exp-item {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 3rem;
+    padding: 3rem 0;
+    border-bottom: 1px solid var(--border);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+  .exp-item.visible { opacity: 1; transform: translateY(0); }
+
+  .exp-meta { text-align: right; }
+
+  .exp-period {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.9rem;
+    color: var(--gold);
+    font-style: italic;
+  }
+
+  .exp-org {
+    font-size: 0.78rem;
+    color: var(--muted);
+    margin-top: 0.4rem;
+    line-height: 1.5;
+  }
+
+  .exp-role {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: var(--ink);
+    margin-bottom: 1rem;
+  }
+
+  .exp-details {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .exp-details li {
+    font-size: 0.88rem;
+    color: var(--muted);
+    padding-left: 1.2rem;
+    position: relative;
+    line-height: 1.7;
+  }
+
+  .exp-details li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+  }
+
+  /* ── EDUCATION ── */
+  .edu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  .edu-card {
+    padding: 2.5rem;
+    border: 1px solid var(--border);
+    background: var(--warm-white);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .edu-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(107,76,53,0.08);
+  }
+
+  .edu-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--gold), var(--brown));
+    transform: scaleX(0);
+    transition: transform 0.3s;
+    transform-origin: left;
+  }
+
+  .edu-card:hover::after { transform: scaleX(1); }
+
+  .edu-year {
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1rem;
+  }
+
+  .edu-degree {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--ink);
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+  }
+
+  .edu-institution {
+    font-size: 0.82rem;
+    color: var(--muted);
+    margin-bottom: 1rem;
+  }
+
+  .edu-grade {
+    display: inline-block;
+    background: var(--accent-bg);
+    color: var(--brown);
+    font-size: 0.75rem;
+    padding: 0.3rem 0.7rem;
+    font-weight: 500;
+  }
+
+  /* ── CONTACT ── */
+  #contact {
+    background: var(--ink);
+    color: white;
+  }
+
+  #contact .section-title { color: white; }
+  #contact .section-title em { color: var(--gold); }
+  #contact .section-number { color: var(--gold); }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    align-items: center;
+  }
+
+  .contact-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 1.6;
+    color: rgba(255,255,255,0.7);
+  }
+
+  .contact-items {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    padding: 1.2rem 1.5rem;
+    border: 1px solid rgba(255,255,255,0.1);
+    transition: border-color 0.2s;
+  }
+
+  .contact-item:hover { border-color: var(--gold); }
+
+  .contact-icon {
+    width: 36px; height: 36px;
+    background: rgba(201,151,44,0.15);
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+    font-size: 1rem;
+  }
+
+  .contact-label {
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.2rem;
+  }
+
+  .contact-value {
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.8);
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--ink);
+    border-top: 1px solid rgba(255,255,255,0.08);
+    padding: 2rem 6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  footer p {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.3);
+    letter-spacing: 0.05em;
+  }
+
+  /* ── ANIMATIONS ── */
+  @keyframes slideIn {
+    to { opacity: 1; transform: translateX(0); }
+  }
+
+  @keyframes fadeIn {
+    to { opacity: 1; }
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    nav { padding: 1rem 2rem; }
+    .nav-links { display: none; }
+    .hero { grid-template-columns: 1fr; min-height: auto; }
+    .hero-left { padding: 6rem 2rem 3rem; }
+    .hero-right { height: 400px; }
+    .hero-photo { width: 240px; height: 300px; }
+    section { padding: 4rem 2rem; }
+    .about-grid { grid-template-columns: 1fr; gap: 3rem; }
+    .exp-item { grid-template-columns: 1fr; gap: 0.5rem; }
+    .exp-meta { text-align: left; }
+    .edu-grid { grid-template-columns: 1fr; }
+    .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
+    footer { flex-direction: column; gap: 1rem; padding: 2rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">Saritha R. Shetty</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero" style="border-top: none; padding: 0;">
+  <div class="hero-left">
+    <span class="hero-tag">Academic Administration Specialist</span>
+    <h1 class="hero-name">Saritha<br><em>R. Shetty</em></h1>
+    <p class="hero-title">Registrar Operations · Admissions · Student Records</p>
+    <p class="hero-desc">
+      12+ years of dedicated service at the National Institute of Technology Karnataka — managing end-to-end admissions, student lifecycle operations, and institutional compliance at a Government Institute of National Importance.
+    </p>
+    <div class="hero-cta">
+      <a href="mailto:sarithashettynitk09@gmail.com" class="btn-primary">Get in Touch</a>
+      <a href="#experience" class="btn-secondary">View Experience</a>
+    </div>
+    <div class="hero-stats" style="position:relative; bottom:auto; left:auto; margin-top: 3rem;">
+      <div class="stat-item">
+        <div class="stat-number">12+</div>
+        <div class="stat-label">Years Experience</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">1,500+</div>
+        <div class="stat-label">Admissions / Year</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">15K+</div>
+        <div class="stat-label">Records Managed</div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <!-- Replace 'photo.jpg' with your actual photo file in same folder -->
+    <div class="hero-photo-frame">
+      <div style="width:320px;height:400px;background:linear-gradient(135deg,#e8e0d4,#d4c8b8);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:1rem;">
+        <div style="font-size:4rem;">👩‍💼</div>
+        <p style="font-family:'Cormorant Garamond',serif;font-size:0.85rem;color:var(--muted);letter-spacing:0.1em;text-align:center;padding:0 2rem;">Replace this with<br>your photo<br><em style="font-size:0.75rem;">(name it photo.jpg)</em></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-header">
+    <span class="section-number">01</span>
+    <h2 class="section-title">About <em>Me</em></h2>
+  </div>
+  <div class="about-grid">
+    <div class="about-text">
+      <p>
+        I am an <strong>Academic Administration and Admissions Specialist</strong> with over 12 years of experience at the National Institute of Technology Karnataka (NITK Surathkal), an Institute of National Importance under the Government of India.
+      </p>
+      <p>
+        My expertise spans the complete student lifecycle — from application and document verification, eligibility assessment, enrolment confirmation, through to graduation and degree certification — across 40+ UG, PG and PhD programmes.
+      </p>
+      <p>
+        I bring demonstrated proficiency in <strong>Oracle database management</strong>, Academic ERP (IRIS), centralized admission portals (JoSAA, CCMT, CCMN), and compliance reporting to MoE, UGC, NBA, NIRF and AISHE. I am an <strong>IBM Database Certified</strong> professional and MCA postgraduate.
+      </p>
+      <p>
+        As Lead DASA & CIWG Verification Officer, I have managed international admissions for Gulf country students (Kuwait, UAE, Saudi Arabia, Qatar, Bahrain, Oman) with <strong>100% verification accuracy</strong> across 15,000+ applications.
+      </p>
+      <div class="skills-list">
+        <span class="skill-tag">Student Records</span>
+        <span class="skill-tag">Admissions Management</span>
+        <span class="skill-tag">Oracle / SQL</span>
+        <span class="skill-tag">Academic ERP (IRIS)</span>
+        <span class="skill-tag">International Admissions</span>
+        <span class="skill-tag">Registrar Operations</span>
+        <span class="skill-tag">NAD / DigiLocker</span>
+        <span class="skill-tag">NIRF / AISHE Reporting</span>
+        <span class="skill-tag">Compliance</span>
+        <span class="skill-tag">IBM Database Certified</span>
+        <span class="skill-tag">Crystal Reports</span>
+        <span class="skill-tag">MS Office Suite</span>
+      </div>
+    </div>
+    <div class="about-highlights">
+      <div class="highlight-card">
+        <div class="highlight-number">1,500+</div>
+        <div class="highlight-desc">Student admissions processed annually across 40+ UG, PG & PhD programmes with zero errors</div>
+      </div>
+      <div class="highlight-card">
+        <div class="highlight-number">15,000+</div>
+        <div class="highlight-desc">Student records maintained in Oracle 9i database with zero documented errors over 12+ years</div>
+      </div>
+      <div class="highlight-card">
+        <div class="highlight-number">100%</div>
+        <div class="highlight-desc">Verification accuracy as Lead DASA & CIWG Officer for Gulf country international students</div>
+      </div>
+      <div class="highlight-card">
+        <div class="highlight-number">40+</div>
+        <div class="highlight-desc">Academic programmes managed simultaneously, supporting full student lifecycle from enquiry to graduation</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="section-header">
+    <span class="section-number">02</span>
+    <h2 class="section-title">Professional <em>Experience</em></h2>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-meta">
+      <div class="exp-period">Jan 2014 — Present</div>
+      <div class="exp-org">National Institute of Technology Karnataka<br>Surathkal, India</div>
+    </div>
+    <div class="exp-content">
+      <h3 class="exp-role">Academic Administration Officer / Assistant Registrar</h3>
+      <ul class="exp-details">
+        <li>Managed end-to-end admissions lifecycle for UG, PG and PhD programmes for 1,500+ students annually across 40+ programs</li>
+        <li>Operated JoSAA, CCMT and CCMN portals during peak admission periods with zero errors</li>
+        <li>Lead DASA & CIWG Verification Officer — processed 100–200 international student applications annually from Gulf countries</li>
+        <li>Maintained Oracle 9i student database with 15,000+ records and zero documented errors over 12 years</li>
+        <li>Generated and issued confidential academic documents — Grade Cards, Transcripts, Degree Certificates using Crystal Reports</li>
+        <li>Served as Verification Officer for NAD/DigiLocker — uploaded and digitally certified UG, PG and PhD credentials</li>
+        <li>Compiled and submitted institutional data to MoE, UGC, NBA, NIRF and AISHE national reporting platforms</li>
+        <li>Coordinated annual Convocation — issued Degree Certificates and Gold Medallist Certificates to top-ranking students</li>
+        <li>Processed doctoral research scholar stipends through PFMS Portal (DST, SERB, INSPIRE, CSIR)</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+  <div class="section-header">
+    <span class="section-number">03</span>
+    <h2 class="section-title">Education & <em>Qualifications</em></h2>
+  </div>
+  <div class="edu-grid">
+    <div class="edu-card">
+      <div class="edu-year">2010 – 2013</div>
+      <h3 class="edu-degree">Master of Computer Applications</h3>
+      <p class="edu-institution">AIMIT St. Aloysius College (Autonomous)<br>Mangalore University</p>
+      <span class="edu-grade">First Class · 66.78%</span>
+    </div>
+    <div class="edu-card">
+      <div class="edu-year">2007 – 2010</div>
+      <h3 class="edu-degree">Bachelor of Science</h3>
+      <p class="edu-institution">Dr. N.S.A.M. First Grade College, Nitte<br>Mangalore University</p>
+      <span class="edu-grade">First Class · 63.1%</span>
+    </div>
+    <div class="edu-card">
+      <div class="edu-year">Certification</div>
+      <h3 class="edu-degree">IBM Database Certified Professional</h3>
+      <p class="edu-institution">IBM</p>
+      <span class="edu-grade">Certified ✓</span>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-header">
+    <span class="section-number">04</span>
+    <h2 class="section-title">Get in <em>Touch</em></h2>
+  </div>
+  <div class="contact-grid">
+    <div class="contact-text">
+      Open to Senior Admissions, Graduate Administration, and Registrar Operations roles in India and Singapore.
+    </div>
+    <div class="contact-items">
+      <div class="contact-item">
+        <div class="contact-icon">📧</div>
+        <div>
+          <div class="contact-label">Email</div>
+          <div class="contact-value">sarithashettynitk09@gmail.com</div>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">📱</div>
+        <div>
+          <div class="contact-label">Mobile</div>
+          <div class="contact-value">+91 8746065577</div>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">📍</div>
+        <div>
+          <div class="contact-label">Location</div>
+          <div class="contact-value">Nitte, Karkala, Udupi District<br>Karnataka, India · Open to Relocation</div>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">💼</div>
+        <div>
+          <div class="contact-label">LinkedIn</div>
+          <div class="contact-value">linkedin.com/in/saritha-r-shetty</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 Saritha R. Shetty · Academic Administration Specialist</p>
+  <p>Nitte, Karnataka, India</p>
+</footer>
+
+<script>
+  // Scroll animation for experience items
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) e.target.classList.add('visible');
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.exp-item').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
