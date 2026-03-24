@@ -555,6 +555,43 @@
     letter-spacing: 0.05em;
   }
 
+  .hero-right-overlay {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 2rem;
+  }
+
+  .nitk-label {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: white;
+    line-height: 1.3;
+    margin-bottom: 0.8rem;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+  }
+
+  .nitk-sub {
+    font-size: 0.8rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.8);
+    margin-bottom: 2rem;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+  }
+
+  .nitk-years {
+    display: inline-block;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    font-size: 0.75rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    padding: 0.6rem 1.5rem;
+    background: rgba(0,0,0,0.3);
+  }
+
   /* ── ANIMATIONS ── */
   @keyframes slideIn {
     to { opacity: 1; transform: translateX(0); }
@@ -624,8 +661,10 @@
     </div>
   </div>
   <div class="hero-right">
-    <div class="hero-photo-frame">
-      <img src="saritha.jpg" class="hero-photo" alt="Saritha R Shetty">
+    <div class="hero-right-overlay">
+      <div class="nitk-label">National Institute of Technology Karnataka</div>
+      <div class="nitk-sub">Surathkal &middot; Institute of National Importance</div>
+      <div class="nitk-years">12+ Years of Service</div>
     </div>
   </div>
 </section>
