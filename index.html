@@ -178,7 +178,7 @@
 
   .hero-right {
     position: relative;
-    background: var(--cream);
+    background: url('b1.jpg') center center / cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -187,19 +187,20 @@
     animation: fadeIn 1s ease forwards 0.5s;
   }
 
-  .hero-right::before {
+  .hero-right::after {
     content: '';
     position: absolute;
-    top: -50px; right: -50px;
-    width: 300px; height: 300px;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(201,151,44,0.12) 0%, transparent 70%);
+    inset: 0;
+    background: rgba(26, 23, 20, 0.35);
+    z-index: 0;
   }
 
   .hero-photo-frame {
     position: relative;
-    z-index: 1;
+    z-index: 2;
   }
+
+
 
   .hero-photo-frame::before {
     content: '';
@@ -624,7 +625,7 @@
   </div>
   <div class="hero-right">
     <div class="hero-photo-frame">
-      <img src="saritha_nobg1.jpg" class="hero-photo" alt="Saritha R Shetty">
+      <img src="saritha.jpg" class="hero-photo" alt="Saritha R Shetty">
     </div>
   </div>
 </section>
