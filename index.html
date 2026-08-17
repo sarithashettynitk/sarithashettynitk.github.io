@@ -1,496 +1,596 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Saritha R Shetty | Assistant Programmer | Application Developer</title>
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Saritha R Shetty | Assistant Programmer | NITK</title>
+
+    <meta name="description"
+          content="Saritha R Shetty - Assistant Programmer at NITK with 12+ years of experience supporting 
+      academic and institutional systems, including Institute IRIS ERP, Admissions and Counselling, Academic Grading, NAD-Digilocker, 
+      AISHE, Oracle databases, application development and student academic data management.">
 
  
-  <html>
-  <head> 
-<meta charset="UTF-8">
-<meta name="description"
-content="Saritha R Shetty - Assistant Programmer at NITK with 12+ years of experience supporting 
-  academic and institutional systems, including NITK IRIS ERP, admissions and counselling, academic grading, NAD, AISHE, Oracle databases, 
-  application development and student academic data management.">
-  <style>
-    :root {
-      --bg: #0b0d10;
-      --card: #151a20;
-      --text: #f2f3f5;
-      --muted: #aeb5bd;
-      --gold: #d8b36a;
-      --gold-light: #f0d59a;
-      --border: rgba(255,255,255,0.10);
-      --max: 1180px;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.7;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    /* NAVIGATION */
-
-    nav {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background: rgba(11,13,16,0.95);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid var(--border);
-
-      padding: 1rem 4rem;
-
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .nav-logo {
-      font-size: 1.1rem;
-      font-weight: bold;
-      letter-spacing: 0.08em;
-    }
-
-    .nav-links {
-      list-style: none;
-      display: flex;
-      gap: 2rem;
-    }
-
-    .nav-links a {
-      color: var(--muted);
-      font-size: 0.9rem;
-    }
-
-    .nav-links a:hover {
-      color: var(--gold);
-    }
-
-    /* HERO */
+    <style>
 
-    .hero {
-      max-width: var(--max);
-      margin: auto;
-      min-height: 720px;
-
-      display: grid;
-      grid-template-columns: 1.25fr 0.75fr;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-      align-items: center;
-      gap: 4rem;
+        html {
+            scroll-behavior: smooth;
+        }
 
-      padding: 6rem 2rem;
-    }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #0b0d10;
+            color: #f2f3f5;
+            line-height: 1.7;
+        }
 
-    .hero-tag {
-      display: inline-block;
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
 
-      border: 1px solid var(--gold);
-      color: var(--gold);
+        :root {
+            --background: #0b0d10;
+            --card: #151a20;
+            --text: #f2f3f5;
+            --muted: #aeb5bd;
+            --gold: #d8b36a;
+            --gold-light: #f0d59a;
+            --border: rgba(255,255,255,0.10);
+            --max-width: 1180px;
+        }
 
-      padding: 0.55rem 1.2rem;
 
-      font-size: 0.72rem;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
+        /* =========================
+           NAVIGATION
+        ========================= */
 
-      margin-bottom: 1.5rem;
-    }
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
 
-    .hero-name {
-      font-size: clamp(3rem, 7vw, 6rem);
-      line-height: 0.95;
+            background: rgba(11, 13, 16, 0.96);
 
-      margin-bottom: 1.5rem;
-    }
+            backdrop-filter: blur(10px);
 
-    .hero-name em {
-      color: var(--gold);
-      font-style: normal;
-    }
+            border-bottom: 1px solid var(--border);
 
-    .hero-title {
-      font-size: 1.25rem;
-      color: var(--gold-light);
+            padding: 18px 50px;
 
-      margin-bottom: 1.3rem;
-    }
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-    .hero-desc {
-      max-width: 700px;
+        .nav-logo {
+            font-size: 18px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
 
-      color: var(--muted);
+        .nav-links {
+            list-style: none;
 
-      font-size: 1.05rem;
-    }
+            display: flex;
 
-    .hero-buttons {
-      display: flex;
-      gap: 1rem;
+            gap: 30px;
+        }
 
-      margin-top: 2rem;
+        .nav-links a {
+            color: var(--muted);
 
-      flex-wrap: wrap;
-    }
+            font-size: 14px;
 
-    .btn {
-      padding: 0.8rem 1.4rem;
+            transition: 0.3s;
+        }
 
-      border: 1px solid var(--gold);
+        .nav-links a:hover {
+            color: var(--gold);
+        }
 
-      font-size: 0.9rem;
-    }
 
-    .btn-primary {
-      background: var(--gold);
-      color: #111;
-    }
+        /* =========================
+           HERO
+        ========================= */
 
-    .btn-secondary {
-      color: var(--gold);
-    }
+        .hero {
+            max-width: var(--max-width);
 
-    .hero-card {
-      border: 1px solid var(--border);
+            min-height: 720px;
 
-      background: var(--card);
+            margin: auto;
 
-      padding: 2rem;
-    }
+            padding: 80px 30px;
 
-    .hero-card h3 {
-      color: var(--gold);
+            display: grid;
 
-      margin-bottom: 1rem;
-    }
+            grid-template-columns: 1.3fr 0.7fr;
 
-    .hero-card p {
-      color: var(--muted);
+            align-items: center;
 
-      margin-bottom: 0.8rem;
-    }
+            gap: 60px;
+        }
 
-    .hero-stats {
-      display: grid;
+        .hero-tag {
+            display: inline-block;
 
-      grid-template-columns: repeat(3, 1fr);
+            color: var(--gold);
 
-      gap: 1rem;
+            border: 1px solid var(--gold);
 
-      margin-top: 3rem;
-    }
+            padding: 8px 18px;
 
-    .stat {
-      border-top: 1px solid var(--gold);
+            font-size: 12px;
 
-      padding-top: 1rem;
-    }
+            letter-spacing: 2px;
 
-    .stat-number {
-      font-size: 2rem;
+            text-transform: uppercase;
 
-      color: var(--gold);
-    }
+            margin-bottom: 25px;
+        }
 
-    .stat-label {
-      color: var(--muted);
+        .hero-name {
+            font-size: clamp(48px, 7vw, 90px);
 
-      font-size: 0.78rem;
-    }
+            line-height: 0.95;
 
-    /* SECTIONS */
+            margin-bottom: 25px;
+        }
 
-    section.content-section {
-      max-width: var(--max);
+        .hero-name em {
+            color: var(--gold);
 
-      margin: auto;
+            font-style: normal;
+        }
 
-      padding: 6rem 2rem;
-    }
+        .hero-title {
+            color: var(--gold-light);
 
-    .section-header {
-      margin-bottom: 3rem;
-    }
+            font-size: 20px;
 
-    .section-number {
-      color: var(--gold);
+            margin-bottom: 20px;
+        }
 
-      font-size: 0.75rem;
+        .hero-desc {
+            color: var(--muted);
 
-      letter-spacing: 0.2em;
-    }
+            font-size: 16px;
 
-    .section-title {
-      font-size: 2.5rem;
+            max-width: 720px;
+        }
 
-      margin-top: 0.5rem;
-    }
+        .hero-buttons {
+            display: flex;
 
-    .section-title em {
-      color: var(--gold);
+            gap: 15px;
 
-      font-style: normal;
-    }
+            margin-top: 30px;
 
-    /* ABOUT */
+            flex-wrap: wrap;
+        }
 
-    .about-text {
-      max-width: 900px;
+        .button {
+            padding: 12px 22px;
 
-      color: var(--muted);
+            border: 1px solid var(--gold);
 
-      font-size: 1.05rem;
-    }
+            font-size: 14px;
 
-    .about-text p {
-      margin-bottom: 1.2rem;
-    }
+            transition: 0.3s;
+        }
 
-    strong {
-      color: var(--text);
-    }
+        .button-primary {
+            background: var(--gold);
 
-    /* EXPERIENCE */
+            color: #111;
+        }
 
-    .experience-item {
-      border-left: 2px solid var(--gold);
+        .button-secondary {
+            color: var(--gold);
+        }
 
-      padding-left: 2rem;
+        .button:hover {
+            opacity: 0.85;
+        }
 
-      margin-bottom: 3rem;
-    }
 
-    .experience-item h3 {
-      font-size: 1.4rem;
+        /* =========================
+           HERO CARD
+        ========================= */
 
-      margin-bottom: 0.3rem;
-    }
+        .hero-card {
+            background: var(--card);
 
-    .experience-role {
-      color: var(--gold);
+            border: 1px solid var(--border);
 
-      font-weight: bold;
+            padding: 35px;
+        }
 
-      margin-bottom: 1rem;
-    }
+        .hero-card h3 {
+            color: var(--gold);
 
-    .experience-item p,
-    .experience-item li {
-      color: var(--muted);
-    }
+            margin-bottom: 20px;
+        }
 
-    ul {
-      padding-left: 1.2rem;
-    }
+        .hero-card p {
+            color: var(--muted);
 
-    li {
-      margin-bottom: 0.5rem;
-    }
+            margin-bottom: 15px;
+        }
 
-    /* PROJECTS */
+        .hero-card strong {
+            color: var(--text);
+        }
 
-    .projects-grid {
-      display: grid;
 
-      grid-template-columns: repeat(2, 1fr);
+        /* =========================
+           STATS
+        ========================= */
 
-      gap: 1.5rem;
-    }
+        .stats {
+            display: grid;
 
-    .project-card {
-      background: var(--card);
+            grid-template-columns: repeat(3, 1fr);
 
-      border: 1px solid var(--border);
+            gap: 20px;
 
-      padding: 2rem;
+            margin-top: 50px;
+        }
 
-      transition: 0.3s;
-    }
+        .stat {
+            border-top: 1px solid var(--gold);
 
-    .project-card:hover {
-      border-color: var(--gold);
+            padding-top: 15px;
+        }
 
-      transform: translateY(-4px);
-    }
+        .stat-number {
+            color: var(--gold);
 
-    .project-card.featured {
-      grid-column: span 2;
+            font-size: 30px;
 
-      border-color: var(--gold);
-    }
+            font-weight: bold;
+        }
 
-    .project-label {
-      color: var(--gold);
+        .stat-label {
+            color: var(--muted);
 
-      font-size: 0.75rem;
+            font-size: 12px;
+        }
 
-      letter-spacing: 0.15em;
 
-      text-transform: uppercase;
+        /* =========================
+           SECTIONS
+        ========================= */
 
-      margin-bottom: 0.7rem;
-    }
+        section {
+            max-width: var(--max-width);
 
-    .project-card h3 {
-      font-size: 1.5rem;
+            margin: auto;
 
-      margin-bottom: 0.5rem;
-    }
+            padding: 90px 30px;
+        }
 
-    .tech {
-      color: var(--gold-light);
+        .section-number {
+            color: var(--gold);
 
-      font-size: 0.85rem;
+            font-size: 12px;
 
-      margin-bottom: 1rem;
-    }
+            letter-spacing: 4px;
+        }
 
-    .project-card p,
-    .project-card li {
-      color: var(--muted);
-    }
+        .section-title {
+            font-size: 40px;
 
-    /* SKILLS */
+            margin-top: 8px;
 
-    .skills-grid {
-      display: grid;
+            margin-bottom: 45px;
+        }
 
-      grid-template-columns: repeat(2, 1fr);
+        .section-title em {
+            color: var(--gold);
 
-      gap: 1.5rem;
-    }
+            font-style: normal;
+        }
 
-    .skill-card {
-      background: var(--card);
 
-      border: 1px solid var(--border);
+        /* =========================
+           ABOUT
+        ========================= */
 
-      padding: 1.5rem;
-    }
+        .about-content {
+            max-width: 950px;
+        }
 
-    .skill-card h3 {
-      color: var(--gold);
+        .about-content p {
+            color: var(--muted);
 
-      margin-bottom: 0.8rem;
+            font-size: 16px;
 
-      font-size: 1rem;
-    }
+            margin-bottom: 18px;
+        }
 
-    .skill-card p {
-      color: var(--muted);
-    }
+        .about-content strong {
+            color: var(--text);
+        }
 
-    /* EDUCATION */
 
-    .education-card {
-      background: var(--card);
+        /* =========================
+           EXPERIENCE
+        ========================= */
 
-      border: 1px solid var(--border);
+        .experience-item {
+            border-left: 2px solid var(--gold);
 
-      padding: 2rem;
+            padding-left: 30px;
 
-      margin-bottom: 1rem;
-    }
+            margin-bottom: 55px;
+        }
 
-    .education-card h3 {
-      color: var(--gold);
-    }
+        .experience-item h3 {
+            font-size: 23px;
 
-    .education-card p {
-      color: var(--muted);
-    }
+            margin-bottom: 5px;
+        }
 
-    /* CONTACT */
+        .experience-role {
+            color: var(--gold);
 
-    .contact-box {
-      background: var(--card);
+            font-weight: bold;
 
-      border: 1px solid var(--border);
+            margin-bottom: 20px;
+        }
 
-      padding: 2.5rem;
-    }
+        .experience-item p {
+            color: var(--muted);
+        }
 
-    .contact-box p {
-      color: var(--muted);
+        .experience-item ul {
+            padding-left: 20px;
+        }
 
-      margin-bottom: 0.8rem;
-    }
+        .experience-item li {
+            color: var(--muted);
 
-    .contact-box a {
-      color: var(--gold-light);
-    }
+            margin-bottom: 9px;
+        }
 
-    /* FOOTER */
+        .experience-item li strong {
+            color: var(--text);
+        }
 
-    footer {
-      border-top: 1px solid var(--border);
 
-      padding: 2rem;
+        /* =========================
+           PROJECTS
+        ========================= */
 
-      text-align: center;
+        .projects-grid {
+            display: grid;
 
-      color: var(--muted);
+            grid-template-columns: repeat(2, 1fr);
 
-      font-size: 0.85rem;
-    }
+            gap: 22px;
+        }
 
-    /* MOBILE */
+        .project-card {
+            background: var(--card);
 
-    @media (max-width: 850px) {
+            border: 1px solid var(--border);
 
-      nav {
-        padding: 1rem 1.5rem;
-      }
+            padding: 30px;
 
-      .nav-links {
-        display: none;
-      }
+            transition: 0.3s;
+        }
 
-      .hero {
-        grid-template-columns: 1fr;
+        .project-card:hover {
+            border-color: var(--gold);
 
-        padding: 4rem 1.5rem;
-      }
+            transform: translateY(-4px);
+        }
 
-      .hero-stats {
-        grid-template-columns: 1fr;
-      }
+        .project-card.featured {
+            grid-column: span 2;
 
-      section.content-section {
-        padding: 4rem 1.5rem;
-      }
+            border-color: var(--gold);
+        }
 
-      .projects-grid,
-      .skills-grid {
-        grid-template-columns: 1fr;
-      }
+        .project-label {
+            color: var(--gold);
 
-      .project-card.featured {
-        grid-column: span 1;
-      }
-    }
+            font-size: 11px;
 
-  </style>
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 12px;
+        }
+
+        .project-card h3 {
+            font-size: 23px;
+
+            margin-bottom: 8px;
+        }
+
+        .technology {
+            color: var(--gold-light);
+
+            font-size: 14px;
+
+            margin-bottom: 18px;
+        }
+
+        .project-card p,
+        .project-card li {
+            color: var(--muted);
+        }
+
+        .project-card ul {
+            padding-left: 20px;
+        }
+
+        .project-card li {
+            margin-bottom: 7px;
+        }
+
+
+        /* =========================
+           SKILLS
+        ========================= */
+
+        .skills-grid {
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 22px;
+        }
+
+        .skill-card {
+            background: var(--card);
+
+            border: 1px solid var(--border);
+
+            padding: 25px;
+        }
+
+        .skill-card h3 {
+            color: var(--gold);
+
+            font-size: 17px;
+
+            margin-bottom: 10px;
+        }
+
+        .skill-card p {
+            color: var(--muted);
+        }
+
+
+        /* =========================
+           EDUCATION
+        ========================= */
+
+        .education-card {
+            background: var(--card);
+
+            border: 1px solid var(--border);
+
+            padding: 25px;
+
+            margin-bottom: 18px;
+        }
+
+        .education-card h3 {
+            color: var(--gold);
+
+            margin-bottom: 7px;
+        }
+
+        .education-card p {
+            color: var(--muted);
+        }
+
+
+        /* =========================
+           CONTACT
+        ========================= */
+
+        .contact-box {
+            background: var(--card);
+
+            border: 1px solid var(--border);
+
+            padding: 35px;
+
+            max-width: 800px;
+        }
+
+        .contact-box p {
+            color: var(--muted);
+
+            margin-bottom: 15px;
+        }
+
+        .contact-box strong {
+            color: var(--text);
+        }
+
+        .contact-box a {
+            color: var(--gold-light);
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            border-top: 1px solid var(--border);
+
+            text-align: center;
+
+            padding: 30px;
+
+            color: var(--muted);
+
+            font-size: 13px;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 850px) {
+
+            nav {
+                padding: 18px 25px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                grid-template-columns: 1fr;
+
+                padding: 60px 25px;
+            }
+
+            .stats {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 65px 25px;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .project-card.featured {
+                grid-column: span 1;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
 
 </head>
 
@@ -504,37 +604,37 @@ content="Saritha R Shetty - Assistant Programmer at NITK with 12+ years of exper
 
 <nav>
 
-  <a href="#" class="nav-logo">
-    Saritha R. Shetty
-  </a>
+    <a href="#" class="nav-logo">
+        Saritha R. Shetty
+    </a>
 
-  <ul class="nav-links">
+    <ul class="nav-links">
 
-    <li>
-      <a href="#about">About</a>
-    </li>
+        <li>
+            <a href="#about">About</a>
+        </li>
 
-    <li>
-      <a href="#experience">Experience</a>
-    </li>
+        <li>
+            <a href="#experience">Experience</a>
+        </li>
 
-    <li>
-      <a href="#projects">Projects</a>
-    </li>
+        <li>
+            <a href="#projects">Projects</a>
+        </li>
 
-    <li>
-      <a href="#skills">Skills</a>
-    </li>
+        <li>
+            <a href="#skills">Skills</a>
+        </li>
 
-    <li>
-      <a href="#education">Education</a>
-    </li>
+        <li>
+            <a href="#education">Education</a>
+        </li>
 
-    <li>
-      <a href="#contact">Contact</a>
-    </li>
+        <li>
+            <a href="#contact">Contact</a>
+        </li>
 
-  </ul>
+    </ul>
 
 </nav>
 
@@ -546,162 +646,162 @@ content="Saritha R Shetty - Assistant Programmer at NITK with 12+ years of exper
 <header class="hero">
 
 
-  <div>
+    <div>
 
 
-    <span class="hero-tag">
-      Assistant Programmer · NITK
-    </span>
+        <span class="hero-tag">
+            Assistant Programmer · NITK
+        </span>
 
 
-    <h1 class="hero-name">
+        <h1 class="hero-name">
 
-      Saritha<br>
+            Saritha<br>
 
-      <em>R. Shetty</em>
+            <em>R. Shetty</em>
 
-    </h1>
-
-
-    <p class="hero-title">
-
-      Application Development · Academic Systems · ERP · Database
-
-    </p>
+        </h1>
 
 
-    <p class="hero-desc">
+        <p class="hero-title">
 
-    MCA-qualified Assistant Programmer with 12+ years of experience
-    at the National Institute of Technology Karnataka (NITK),
-    working in the Academic & Confidential Section. Experienced in
-    supporting academic and institutional systems including NITK's
-    IRIS ERP, admissions and counselling, academic grading, NAD,
-    AISHE and student academic data management. Hands-on experience
-    in application development using VB.NET, Oracle and Crystal
-    Reports, including development of the E7 Case Worker application
-    used in the NITK Academic Section.
+            Academic Systems · IRIS ERP · Application Development · Database
 
-</p>
+        </p>
 
-    <div class="hero-buttons">
 
-      <a href="#projects" class="btn btn-primary">
-        View Technical Projects
-      </a>
+        <p class="hero-desc">
 
-      <a href="#experience" class="btn btn-secondary">
-        View Experience
-      </a>
+            MCA-qualified Assistant Programmer with 12+ years of experience
+            at the National Institute of Technology Karnataka (NITK),
+            working in the Academic & Confidential Section. Experienced in
+            supporting academic and institutional systems including NITK's
+            IRIS ERP, admissions and counselling, academic grading, NAD,
+            AISHE and student academic data management. Hands-on experience
+            in application development using VB.NET, Oracle and Crystal
+            Reports, including development of the E7 Case Worker application
+            used in the NITK Academic Section.
+
+        </p>
+
+
+        <div class="hero-buttons">
+
+            <a href="#projects" class="button button-primary">
+                View Technical Projects
+            </a>
+
+            <a href="#experience" class="button button-secondary">
+                View NITK Experience
+            </a>
+
+        </div>
+
+
+        <div class="stats">
+
+
+            <div class="stat">
+
+                <div class="stat-number">
+                    12+
+                </div>
+
+                <div class="stat-label">
+                    Years at NITK
+                </div>
+
+            </div>
+
+
+            <div class="stat">
+
+                <div class="stat-number">
+                    IRIS
+                </div>
+
+                <div class="stat-label">
+                    Institutional ERP
+                </div>
+
+            </div>
+
+
+            <div class="stat">
+
+                <div class="stat-number">
+                    E7
+                </div>
+
+                <div class="stat-label">
+                    Application Developed
+                </div>
+
+            </div>
+
+
+        </div>
+
 
     </div>
 
 
-    <div class="hero-stats">
+    <!-- PROFILE CARD -->
+
+    <div class="hero-card">
 
 
-      <div class="stat">
-
-        <div class="stat-number">
-          12+
-        </div>
-
-        <div class="stat-label">
-          Years at NITK
-        </div>
-
-      </div>
+        <h3>
+            Professional Profile
+        </h3>
 
 
-      <div class="stat">
+        <p>
 
-        <div class="stat-number">
-          IRIS
-        </div>
+            <strong>Current Designation:</strong><br>
 
-        <div class="stat-label">
-          Institutional ERP
-        </div>
+            Assistant Programmer
 
-      </div>
+        </p>
 
 
-      <div class="stat">
+        <p>
 
-        <div class="stat-number">
-          Oracle
-        </div>
+            <strong>Section:</strong><br>
 
-        <div class="stat-label">
-          Database Experience
-        </div>
+            Academic & Confidential Section
 
-      </div>
+        </p>
+
+
+        <p>
+
+            <strong>Institution:</strong><br>
+
+            National Institute of Technology Karnataka
+
+        </p>
+
+
+        <p>
+
+            <strong>Core Domain:</strong><br>
+
+            Academic Systems & Student Data
+
+        </p>
+
+
+        <p>
+
+            <strong>Technical Strengths:</strong><br>
+
+            VB.NET · Oracle · Crystal Reports · IRIS ERP
+
+        </p>
 
 
     </div>
-
-
-  </div>
-
-
-  <!-- HERO CARD -->
-
-  <div class="hero-card">
-
-
-    <h3>
-      Technical Profile
-    </h3>
-
-
-    <p>
-
-      <strong>Current Role:</strong><br>
-
-      Assistant Programmer
-
-    </p>
-
-
-    <p>
-
-      <strong>Section:</strong><br>
-
-      Academic & Confidential Section
-
-    </p>
-
-
-    <p>
-
-      <strong>Institution:</strong><br>
-
-      National Institute of Technology Karnataka
-
-    </p>
-
-
-    <p>
-
-      <strong>Core Experience:</strong><br>
-
-      Application Development, Oracle, IRIS ERP,
-      Academic Systems
-
-    </p>
-
-
-    <p>
-
-      <strong>Application Developed:</strong><br>
-
-      E7 Case Worker
-
-    </p>
-
-
-  </div>
 
 
 </header>
@@ -711,753 +811,761 @@ content="Saritha R Shetty - Assistant Programmer at NITK with 12+ years of exper
      ABOUT
 ========================= -->
 
-<section id="about" class="content-section">
+<section id="about">
 
-
-  <div class="section-header">
 
     <span class="section-number">
-      01
+        01
     </span>
 
+
     <h2 class="section-title">
-      About <em>Me</em>
+        About <em>Me</em>
     </h2>
 
-  </div>
+
+    <div class="about-content">
 
 
-  <div class="about-text">
+        <p>
+
+            I am an <strong>Assistant Programmer</strong> at the
+            <strong>National Institute of Technology Karnataka (NITK),
+            Surathkal</strong>, working in the Academic & Confidential
+            Section.
+
+        </p>
 
 
-    <p>
+        <p>
 
-      I am an <strong>Assistant Programmer</strong> with over
-      12 years of experience at the
-      <strong>National Institute of Technology Karnataka (NITK),
-      Surathkal</strong>, working in the Academic & Confidential
-      Section.
+            I have more than <strong>12 years of experience at NITK</strong>
+            supporting academic and institutional processes involving
+            student academic information, applications, databases,
+            admissions, grading, certificates and academic records.
 
-    </p>
-
-
-    <p>
-
-      My experience includes working with the institutional
-      <strong>IRIS ERP</strong>, student academic data,
-      admission processes, academic grading, grade-card processing,
-      NAD-related activities and institutional academic dashboards.
-
-    </p>
+        </p>
 
 
-    <p>
+        <p>
 
-      I have practical experience with
-      <strong>VB.NET, Oracle and Crystal Reports</strong> and
-      personally developed the
-      <strong>E7 Case Worker application</strong> used in the
-      NITK Academic Section for academic and administrative
-      document generation.
+            I have working experience with
+            <strong>NITK's IRIS ERP</strong> and academic information
+            systems, including academic admissions, counselling,
+            grading-related work, NAD and institutional academic data.
 
-    </p>
+        </p>
 
 
-    <p>
+        <p>
 
-      I also have experience with
-      <strong>web application development</strong> using JSP,
-      ASP.NET/C#, PHP and Laravel, along with
-      <strong>Dart and Flutter</strong> application development.
+            I personally developed the
+            <strong>E7 Case Worker application</strong> used in the
+            NITK Academic Section using <strong>VB.NET</strong>,
+            <strong>Oracle</strong> and <strong>Crystal Reports</strong>.
 
-    </p>
-
-
-    <p>
-
-      I am currently strengthening my practical skills in
-      <strong>Ruby on Rails, REST APIs, Git, CI/CD, automated
-      testing, Docker, application deployment, server concepts
-      and monitoring</strong>.
-
-    </p>
+        </p>
 
 
-  </div>
+        <p>
+
+            I also have experience with web technologies and
+            application development, including HTML, CSS, JavaScript,
+            PHP, Laravel and basic mobile application development
+            using Dart and Flutter.
+
+        </p>
+
+
+        <p>
+
+            I am currently strengthening my technical knowledge in
+            <strong>Ruby on Rails, REST APIs, Git, CI/CD, automated
+            testing, Docker, application deployment, server concepts
+            and monitoring</strong>.
+
+        </p>
+
+
+    </div>
 
 
 </section>
 
 
 <!-- =========================
-     EXPERIENCE
+     PROFESSIONAL EXPERIENCE
 ========================= -->
 
-<section id="experience" class="content-section">
+<section id="experience">
 
-
-  <div class="section-header">
 
     <span class="section-number">
-      02
+        02
     </span>
 
+
     <h2 class="section-title">
-      Professional <em>Experience</em>
+        NITK <em>Experience</em>
     </h2>
 
-  </div>
+
+    <!-- CURRENT ROLE -->
+
+    <div class="experience-item">
 
 
-  <!-- NITK EXPERIENCE -->
-
-  <div class="experience-item">
-
-
-    <h3>
-      National Institute of Technology Karnataka (NITK), Surathkal
-    </h3>
+        <h3>
+            National Institute of Technology Karnataka (NITK), Surathkal
+        </h3>
 
 
-    <div class="experience-role">
+        <div class="experience-role">
 
-      Assistant Programmer · Academic & Confidential Section
+            Assistant Programmer · Academic & Confidential Section
+
+        </div>
+
+
+        <ul>
+
+
+            <li>
+
+                More than <strong>12 years of experience</strong>
+                supporting academic and institutional operations.
+
+            </li>
+
+
+            <li>
+
+                Working experience with
+                <strong>NITK's IRIS ERP</strong> and academic
+                information systems.
+
+            </li>
+
+
+            <li>
+
+                Handling student academic information and records
+                for UG, PG and PhD programmes.
+
+            </li>
+
+
+            <li>
+
+                Experience with academic grading and
+                grade-card-related processes.
+
+            </li>
+
+
+            <li>
+
+                Experience with
+                <strong>NAD</strong> and digital academic
+                credential-related activities.
+
+            </li>
+
+
+            <li>
+
+                Experience with
+                <strong>AISHE Survey-related work</strong> and
+                institutional academic data.
+
+            </li>
+
+
+            <li>
+
+                Preparation and processing of academic
+                transcripts, original grade cards and provisional
+                grade cards.
+
+            </li>
+
+
+            <li>
+
+                Handling academic and confidential student
+                information with attention to data accuracy
+                and confidentiality.
+
+            </li>
+
+
+            <li>
+
+                Troubleshooting application, database and
+                system-related issues.
+
+            </li>
+
+
+        </ul>
+
 
     </div>
 
 
-    <ul>
+    <!-- ADMISSIONS -->
+
+    <div class="experience-item">
 
 
-      <li>
-
-        12+ years of experience supporting academic systems,
-        student data and application-based academic processes.
-
-      </li>
+        <h3>
+            Admissions & Counselling
+        </h3>
 
 
-      <li>
+        <div class="experience-role">
 
-        Hands-on experience working with the
-        <strong>NITK IRIS ERP</strong>.
+            Student Admissions · Verification · Academic ERP
 
-      </li>
-
-
-      <li>
-
-        Worked with academic Admission, Grading and
-        NAD-related processes.
-
-      </li>
+        </div>
 
 
-      <li>
-
-        Worked with academic data for B.Tech, M.Tech, MSc,
-        MCA, MBA and PhD programmes.
-
-      </li>
+        <ul>
 
 
-      <li>
+            <li>
 
-        Prepared and maintained academic grade cards and
-        confidential academic records.
+                Worked on student admission and counselling-related
+                activities.
 
-      </li>
-
-
-      <li>
-
-        Worked with NAD-related academic data and
-        certificate processes.
-
-      </li>
+            </li>
 
 
-      <li>
+            <li>
 
-        Handled <strong>AISHE Survey</strong>-related
-        institutional data and reporting.
+                Experience with admission and counselling processes
+                involving <strong>JoSAA, CSAB, CCMT, CCMN,
+                DASA and CIWG</strong>.
 
-      </li>
-
-
-      <li>
-
-        Worked with institutional academic dashboards
-        and student academic information.
-
-      </li>
+            </li>
 
 
-      <li>
+            <li>
 
-        Handled student academic data using
-        <strong>Oracle databases</strong>.
+                Performed student eligibility and document
+                verification activities.
 
-      </li>
-
-
-      <li>
-
-        Troubleshot application, database and
-        system-related issues.
-
-      </li>
+            </li>
 
 
-    </ul>
+            <li>
+
+                Worked with student admission information and
+                academic records.
+
+            </li>
 
 
-  </div>
+            <li>
+
+                Used institutional academic systems and
+                <strong>IRIS ERP</strong> in support of academic
+                processes.
+
+            </li>
 
 
-  <!-- E7 CASE WORKER -->
+        </ul>
 
-  <div class="experience-item">
-
-
-    <h3>
-      E7 Case Worker – Academic Application
-    </h3>
-
-
-    <div class="experience-role">
-
-      Application Developed by Me · NITK Academic Section
 
     </div>
 
 
-    <p>
+    <!-- GRADING -->
 
-      Personally designed and developed the
-      <strong>E7 Case Worker application</strong>, which is
-      used in the NITK Academic Section for academic and
-      administrative document generation.
-
-    </p>
+    <div class="experience-item">
 
 
-    <br>
+        <h3>
+            Academic Grading & Grade Card Processing
+        </h3>
 
 
-    <ul>
+        <div class="experience-role">
+
+            VB.NET · Oracle · Crystal Reports
+
+        </div>
 
 
-      <li>
+        <p>
 
-        Developed the application frontend using
-        <strong>VB.NET</strong>.
+            Hands-on experience with the existing academic
+            grading workflow and grade-card processing using
+            <strong>VB.NET, Oracle and Crystal Reports</strong>.
 
-      </li>
-
-
-      <li>
-
-        Designed and worked with the
-        <strong>Oracle database backend</strong>.
-
-      </li>
+        </p>
 
 
-      <li>
-
-        Used <strong>Crystal Reports</strong> for
-        automated report and document generation.
-
-      </li>
+        <br>
 
 
-      <li>
+        <p>
 
-        Generated <strong>Bonafide Certificates</strong>.
+            Familiar with student academic records, grading
+            requirements, grade-card preparation and academic
+            data processing.
 
-      </li>
-
-
-      <li>
-
-        Generated <strong>Character Certificates</strong>.
-
-      </li>
+        </p>
 
 
-      <li>
-
-        Supported Expenditure/Fee-related document generation.
-
-      </li>
+        <br>
 
 
-      <li>
+        <p>
 
-        Supported both <strong>Hosteller</strong> and
-        <strong>Day Scholar</strong> categories.
+            This domain knowledge provides practical understanding
+            of the academic requirements involved in implementing
+            grading functionality within an institutional ERP
+            such as <strong>IRIS</strong>.
 
-      </li>
+        </p>
 
-
-      <li>
-
-        Application supports academic requirements for
-        <strong>B.Tech, M.Tech, MSc, MCA, MBA and PhD</strong>
-        students.
-
-      </li>
-
-
-      <li>
-
-        Developed the application based on actual
-        requirements of the NITK Academic Section.
-
-      </li>
-
-
-    </ul>
-
-
-  </div>
-
-
-  <!-- GRADING -->
-
-  <div class="experience-item">
-
-
-    <h3>
-      Academic Grading & Grade Card Processing
-    </h3>
-
-
-    <div class="experience-role">
-
-      VB.NET · Oracle · Crystal Reports
 
     </div>
 
 
-    <p>
+    <!-- NAD -->
 
-      Hands-on experience with the existing NITK academic
-      grading workflow and grade-card processing using
-      <strong>VB.NET, Oracle and Crystal Reports</strong>.
-
-    </p>
+    <div class="experience-item">
 
 
-    <br>
+        <h3>
+            NAD & Digital Academic Credentials
+        </h3>
 
 
-    <p>
+        <div class="experience-role">
 
-      Familiar with student academic records, grading
-      processes, grade-card preparation and academic
-      data requirements.
+            Academic Records · Digital Credentials
 
-    </p>
+        </div>
 
 
-    <br>
+        <ul>
 
 
-    <p>
+            <li>
 
-      This domain knowledge provides practical understanding
-      of the requirements involved in implementing and
-      maintaining grading functionality within the
-      <strong>IRIS ERP</strong>.
+                Experience with <strong>NAD-related academic
+                activities</strong>.
 
-    </p>
+            </li>
 
 
-  </div>
+            <li>
+
+                Worked with academic student data required
+                for digital credential processes.
+
+            </li>
 
 
-  <!-- IRIS / ACADEMIC SYSTEMS -->
+            <li>
 
-  <div class="experience-item">
+                Experience with academic certificate and
+                grade-card information.
 
-
-    <h3>
-      IRIS ERP & Academic Systems
-    </h3>
+            </li>
 
 
-    <div class="experience-role">
+        </ul>
 
-      Institutional ERP · Academic Data · NAD · Admissions
 
     </div>
 
 
-    <ul>
+    <!-- AISHE -->
+
+    <div class="experience-item">
 
 
-      <li>
-
-        Working with the institutional
-        <strong>IRIS ERP</strong>.
-
-      </li>
+        <h3>
+            AISHE Survey
+        </h3>
 
 
-      <li>
+        <div class="experience-role">
 
-        Experience with academic admission-related
-        processes and student information.
+            Institutional Academic Data & Reporting
 
-      </li>
-
-
-      <li>
-
-        Experience with academic grading processes
-        and grade-card data.
-
-      </li>
+        </div>
 
 
-      <li>
+        <p>
 
-        Experience with <strong>NAD</strong>-related
-        academic activities.
+            Worked on <strong>AISHE Survey-related activities</strong>,
+            involving institutional academic information and
+            data required for reporting and submission.
 
-      </li>
+        </p>
 
-
-      <li>
-
-        Experience with student academic records
-        across UG, PG and PhD programmes.
-
-      </li>
-
-
-      <li>
-
-        Experience with institutional academic
-        dashboards and reporting.
-
-      </li>
-
-
-    </ul>
-
-
-  </div>
-
-
-  <!-- AISHE -->
-
-  <div class="experience-item">
-
-
-    <h3>
-      AISHE Survey & Institutional Data
-    </h3>
-
-
-    <div class="experience-role">
-
-      Academic Data · Institutional Reporting
 
     </div>
-
-
-    <p>
-
-      Handled <strong>AISHE Survey-related work</strong>,
-      including institutional academic data and information
-      required for reporting and submission processes.
-
-    </p>
-
-
-  </div>
 
 
 </section>
 
 
 <!-- =========================
-     TECHNICAL PROJECTS
+     PROJECTS
 ========================= -->
 
-<section id="projects" class="content-section">
+<section id="projects">
 
-
-  <div class="section-header">
 
     <span class="section-number">
-      03
+        03
     </span>
 
+
     <h2 class="section-title">
-      Technical <em>Projects</em>
+        Technical <em>Projects</em>
     </h2>
 
-  </div>
+
+    <div class="projects-grid">
 
 
-  <div class="projects-grid">
+        <!-- E7 CASE WORKER -->
+
+        <div class="project-card featured">
 
 
-    <!-- E7 -->
-
-    <div class="project-card featured">
-
-
-      <div class="project-label">
-        NITK · Featured Project
-      </div>
+            <div class="project-label">
+                NITK · Application Developed by Me
+            </div>
 
 
-      <h3>
-        E7 Case Worker
-      </h3>
+            <h3>
+                E7 Case Worker
+            </h3>
 
 
-      <div class="tech">
-        VB.NET · Oracle · Crystal Reports
-      </div>
+            <div class="technology">
+                VB.NET · Oracle · Crystal Reports
+            </div>
 
 
-      <p>
+            <p>
 
-        Academic application personally developed and used
-        in the NITK Academic Section.
+                Personally developed the
+                <strong>E7 Case Worker application</strong>
+                used in the NITK Academic Section for
+                academic and administrative document
+                generation.
 
-      </p>
+            </p>
 
 
-      <br>
+            <br>
 
 
-      <ul>
+            <ul>
 
-        <li>
-          Bonafide Certificate generation
-        </li>
+                <li>
+                    Developed the application frontend using
+                    <strong>VB.NET</strong>.
+                </li>
 
-        <li>
-          Character Certificate generation
-        </li>
+                <li>
+                    Used <strong>Oracle</strong> as the database backend.
+                </li>
 
-        <li>
-          Expenditure/Fee-related documents
-        </li>
+                <li>
+                    Integrated <strong>Crystal Reports</strong>
+                    for document generation.
+                </li>
 
-        <li>
-          Hosteller and Day Scholar processing
-        </li>
+                <li>
+                    Generated <strong>Bonafide Certificates</strong>.
+                </li>
 
-        <li>
-          B.Tech, M.Tech, MSc, MCA, MBA and PhD
-        </li>
+                <li>
+                    Generated <strong>Character Certificates</strong>.
+                </li>
 
-        <li>
-          Oracle database integration
-        </li>
+                <li>
+                    Supported expenditure/fee-related
+                    document generation.
+                </li>
 
-        <li>
-          Crystal Reports integration
-        </li>
+                <li>
+                    Supported <strong>Hosteller</strong> and
+                    <strong>Day Scholar</strong> categories.
+                </li>
 
-      </ul>
+                <li>
+                    Supports requirements for
+                    <strong>B.Tech, M.Tech, MSc, MCA, MBA and PhD</strong>
+                    students.
+                </li>
+
+            </ul>
+
+
+        </div>
+
+
+        <!-- GRADING -->
+
+        <div class="project-card">
+
+
+            <div class="project-label">
+                NITK · Academic System
+            </div>
+
+
+            <h3>
+                Academic Grading & Grade Cards
+            </h3>
+
+
+            <div class="technology">
+                VB.NET · Oracle · Crystal Reports
+            </div>
+
+
+            <p>
+
+                Hands-on experience with the existing academic
+                grading and grade-card workflow, including
+                academic data processing and report generation.
+
+            </p>
+
+
+        </div>
+
+
+        <!-- IRIS -->
+
+        <div class="project-card">
+
+
+            <div class="project-label">
+                Institutional ERP
+            </div>
+
+
+            <h3>
+                NITK IRIS ERP
+            </h3>
+
+
+            <div class="technology">
+                Academic ERP · Student Information · Institutional Systems
+            </div>
+
+
+            <p>
+
+                Working experience with NITK's IRIS ERP and
+                academic information systems, including student
+                academic data and institutional academic processes.
+
+            </p>
+
+
+        </div>
+
+
+        <!-- WEB -->
+
+        <div class="project-card">
+
+
+            <div class="project-label">
+                Web Development
+            </div>
+
+
+            <h3>
+                Railway Reservation System
+            </h3>
+
+
+            <div class="technology">
+                JSP · HTML · MS Access
+            </div>
+
+
+            <p>
+
+                Developed a web-based railway reservation
+                application supporting reservation-related
+                functions.
+
+            </p>
+
+
+        </div>
+
+
+        <!-- ASP.NET -->
+
+        <div class="project-card">
+
+
+            <div class="project-label">
+                Web Application
+            </div>
+
+
+            <h3>
+                Cloud-Based Personal Health Care
+            </h3>
+
+
+            <div class="technology">
+                ASP.NET · C# · SQL Server
+            </div>
+
+
+            <p>
+
+                Developed a web application involving
+                requirements analysis, design, coding
+                and testing.
+
+            </p>
+
+
+        </div>
+
+
+        <!-- FLUTTER -->
+
+        <div class="project-card">
+
+
+            <div class="project-label">
+                Mobile Development
+            </div>
+
+
+            <h3>
+                Flutter Applications
+            </h3>
+
+
+            <div class="technology">
+                Dart · Flutter
+            </div>
+
+
+            <ul>
+
+                <li>
+                    Login application
+                </li>
+
+                <li>
+                    Registration application
+                </li>
+
+                <li>
+                    Simple Calculator
+                </li>
+
+                <li>
+                    Basic Flutter UI and form development
+                </li>
+
+            </ul>
+
+
+        </div>
+
+
+        <!-- PHP LARAVEL -->
+
+        <div class="project-card">
+
+
+            <div class="project-label">
+                Web / Backend Development
+            </div>
+
+
+            <h3>
+                PHP & Laravel Applications
+            </h3>
+
+
+            <div class="technology">
+                PHP · Laravel · MySQL
+            </div>
+
+
+            <ul>
+
+                <li>
+                    Login and registration applications
+                </li>
+
+                <li>
+                    CRUD applications
+                </li>
+
+                <li>
+                    MySQL database integration
+                </li>
+
+                <li>
+                    Backend development practice
+                </li>
+
+            </ul>
+
+
+        </div>
+
+
+        <!-- UI UX -->
+
+        <div class="project-card">
+
+
+            <div class="project-label">
+                UI / UX Design
+            </div>
+
+
+            <h3>
+                Coffee Shop Website
+            </h3>
+
+
+            <div class="technology">
+                Figma · UI Design · UX Design
+            </div>
+
+
+            <p>
+
+                Designed a coffee shop website interface
+                in Figma, including navigation, product
+                listing, filtering, booking and user flows.
+
+            </p>
+
+
+        </div>
 
 
     </div>
-
-
-    <!-- RAILWAY -->
-
-    <div class="project-card">
-
-
-      <div class="project-label">
-        Web Application
-      </div>
-
-
-      <h3>
-        Railway Reservation System
-      </h3>
-
-
-      <div class="tech">
-        JSP · HTML · MS Access
-      </div>
-
-
-      <p>
-
-        Developed a web-based railway reservation application
-        supporting ticket generation, verification and
-        cancellation.
-
-      </p>
-
-
-    </div>
-
-
-    <!-- HEALTHCARE -->
-
-    <div class="project-card">
-
-
-      <div class="project-label">
-        Web Application
-      </div>
-
-
-      <h3>
-        Cloud-Based Personal Health Care
-      </h3>
-
-
-      <div class="tech">
-        ASP.NET · C# · SQL Server
-      </div>
-
-
-      <p>
-
-        Developed a web application involving requirements
-        analysis, design, coding and testing.
-
-      </p>
-
-
-    </div>
-
-
-    <!-- FLUTTER -->
-
-    <div class="project-card">
-
-
-      <div class="project-label">
-        Mobile Development
-      </div>
-
-
-      <h3>
-        Flutter Applications
-      </h3>
-
-
-      <div class="tech">
-        Dart · Flutter
-      </div>
-
-
-      <ul>
-
-        <li>
-          Login application
-        </li>
-
-        <li>
-          Registration application
-        </li>
-
-        <li>
-          Simple Calculator
-        </li>
-
-        <li>
-          Flutter UI and form development
-        </li>
-
-      </ul>
-
-
-    </div>
-
-
-    <!-- PHP -->
-
-    <div class="project-card">
-
-
-      <div class="project-label">
-        Web Development
-      </div>
-
-
-      <h3>
-        PHP / Laravel Applications
-      </h3>
-
-
-      <div class="tech">
-        PHP · Laravel · MySQL
-      </div>
-
-
-      <ul>
-
-        <li>
-          Login and Registration
-        </li>
-
-        <li>
-          CRUD applications
-        </li>
-
-        <li>
-          MySQL database integration
-        </li>
-
-        <li>
-          Backend development practice
-        </li>
-
-      </ul>
-
-
-    </div>
-
-
-    <!-- UI UX -->
-
-    <div class="project-card">
-
-
-      <div class="project-label">
-        UI / UX Design
-      </div>
-
-
-      <h3>
-        Coffee Shop Website
-      </h3>
-
-
-      <div class="tech">
-        Figma · UI Design · UX Design
-      </div>
-
-
-      <p>
-
-        Designed a complete coffee shop website interface
-        including navigation, product listing, filtering,
-        booking and related user flows using Figma.
-
-      </p>
-
-
-    </div>
-
-
-  </div>
 
 
 </section>
@@ -1467,142 +1575,139 @@ content="Saritha R Shetty - Assistant Programmer at NITK with 12+ years of exper
      TECHNICAL SKILLS
 ========================= -->
 
-<section id="skills" class="content-section">
+<section id="skills">
 
-
-  <div class="section-header">
 
     <span class="section-number">
-      04
+        04
     </span>
 
 
     <h2 class="section-title">
-      Technical <em>Skills</em>
+        Technical <em>Skills</em>
     </h2>
 
-  </div>
+
+    <div class="skills-grid">
 
 
-  <div class="skills-grid">
+        <div class="skill-card">
+
+            <h3>
+                Programming
+            </h3>
+
+            <p>
+                VB.NET, Visual Basic, C, C++, Java,
+                C#, PHP, Dart, Python
+            </p>
+
+        </div>
 
 
-    <div class="skill-card">
+        <div class="skill-card">
 
-      <h3>
-        Programming Languages
-      </h3>
+            <h3>
+                Web Development
+            </h3>
 
-      <p>
-        VB.NET, Visual Basic, C, C++, Java,
-        C#, PHP, Dart, Python
-      </p>
+            <p>
+                HTML, CSS, JavaScript, JSP,
+                ASP.NET, C#, PHP, Laravel,
+                WordPress
+            </p>
+
+        </div>
+
+
+        <div class="skill-card">
+
+            <h3>
+                Database
+            </h3>
+
+            <p>
+                Oracle, SQL, PL/SQL, MySQL,
+                MS Access, phpMyAdmin
+            </p>
+
+        </div>
+
+
+        <div class="skill-card">
+
+            <h3>
+                Academic ERP & Systems
+            </h3>
+
+            <p>
+                NITK IRIS ERP, Academic Admissions,
+                Counselling, Academic Grading, NAD,
+                AISHE and Student Academic Data
+            </p>
+
+        </div>
+
+
+        <div class="skill-card">
+
+            <h3>
+                Reporting & Development Tools
+            </h3>
+
+            <p>
+                Visual Studio, Crystal Reports,
+                XAMPP, WAMP and Postman
+            </p>
+
+        </div>
+
+
+        <div class="skill-card">
+
+            <h3>
+                Mobile Development
+            </h3>
+
+            <p>
+                Dart, Flutter, Login,
+                Registration and Calculator Applications
+            </p>
+
+        </div>
+
+
+        <div class="skill-card">
+
+            <h3>
+                Version Control & APIs
+            </h3>
+
+            <p>
+                Git, GitHub, REST API concepts
+                and Postman
+            </p>
+
+        </div>
+
+
+        <div class="skill-card">
+
+            <h3>
+                Currently Strengthening
+            </h3>
+
+            <p>
+                Ruby on Rails, REST APIs, Git workflows,
+                CI/CD, automated testing, Docker,
+                application deployment, server concepts
+                and monitoring
+            </p>
+
+        </div>
+
 
     </div>
-
-
-    <div class="skill-card">
-
-      <h3>
-        Web Development
-      </h3>
-
-      <p>
-        HTML, CSS, JavaScript, JSP, ASP.NET,
-        PHP, Laravel, WordPress
-      </p>
-
-    </div>
-
-
-    <div class="skill-card">
-
-      <h3>
-        Database
-      </h3>
-
-      <p>
-        Oracle, SQL, PL/SQL, MySQL,
-        MS Access, phpMyAdmin
-      </p>
-
-    </div>
-
-
-    <div class="skill-card">
-
-      <h3>
-        ERP & Academic Systems
-      </h3>
-
-      <p>
-        NITK IRIS ERP, Academic Admissions,
-        Academic Grading, NAD, AISHE,
-        Academic Dashboards and Student Data
-      </p>
-
-    </div>
-
-
-    <div class="skill-card">
-
-      <h3>
-        Reporting & Development Tools
-      </h3>
-
-      <p>
-        Crystal Reports, Visual Studio,
-        XAMPP, WAMP, Postman
-      </p>
-
-    </div>
-
-
-    <div class="skill-card">
-
-      <h3>
-        Mobile Application Development
-      </h3>
-
-      <p>
-        Dart, Flutter, Login, Registration,
-        Calculator Applications
-      </p>
-
-    </div>
-
-
-    <div class="skill-card">
-
-      <h3>
-        Version Control & APIs
-      </h3>
-
-      <p>
-        Git, GitHub, REST API concepts,
-        Postman
-      </p>
-
-    </div>
-
-
-    <div class="skill-card">
-
-      <h3>
-        Currently Learning
-      </h3>
-
-      <p>
-        Ruby on Rails, REST API integration,
-        Git workflows, CI/CD, automated testing,
-        Docker, deployment, server concepts
-        and application monitoring
-      </p>
-
-    </div>
-
-
-  </div>
 
 
 </section>
@@ -1612,80 +1717,71 @@ content="Saritha R Shetty - Assistant Programmer at NITK with 12+ years of exper
      EDUCATION
 ========================= -->
 
-<section id="education" class="content-section">
+<section id="education">
 
-
-  <div class="section-header">
 
     <span class="section-number">
-      05
+        05
     </span>
 
 
     <h2 class="section-title">
-      Education & <em>Certification</em>
+        Education <em>& Certification</em>
     </h2>
 
-  </div>
+
+    <div class="education-card">
 
 
-  <div class="education-card">
+        <h3>
+            Master of Computer Applications (MCA)
+        </h3>
 
 
-    <h3>
-      Master of Computer Applications (MCA)
-    </h3>
+        <p>
+            St. Aloysius Institute of Management and
+            Information Technology, Mangalore
+        </p>
 
 
-    <p>
-      St. Aloysius Institute of Management and Information
-      Technology, Mangalore
-    </p>
+        <p>
+            First Class · 66.78%
+        </p>
 
 
-    <p>
-      First Class · 66.78%
-    </p>
+    </div>
 
 
-  </div>
+    <div class="education-card">
 
 
-  <div class="education-card">
+        <h3>
+            Bachelor of Science – Computer Science
+        </h3>
 
 
-    <h3>
-      Bachelor of Science – Computer Science
-    </h3>
+        <p>
+            First Class · 63.1%
+        </p>
 
 
-    <p>
-      Mangalore University
-    </p>
+    </div>
 
 
-    <p>
-      First Class · 63.1%
-    </p>
+    <div class="education-card">
 
 
-  </div>
+        <h3>
+            IBM Database Certification
+        </h3>
 
 
-  <div class="education-card">
+        <p>
+            IBM Database Certified Professional
+        </p>
 
 
-    <h3>
-      IBM Database Certification
-    </h3>
-
-
-    <p>
-      IBM Database Certified Professional
-    </p>
-
-
-  </div>
+    </div>
 
 
 </section>
@@ -1695,74 +1791,66 @@ content="Saritha R Shetty - Assistant Programmer at NITK with 12+ years of exper
      CONTACT
 ========================= -->
 
-<section id="contact" class="content-section">
+<section id="contact">
 
-
-  <div class="section-header">
 
     <span class="section-number">
-      06
+        06
     </span>
 
 
     <h2 class="section-title">
-      Get in <em>Touch</em>
+        Get in <em>Touch</em>
     </h2>
 
-  </div>
+
+    <div class="contact-box">
 
 
-  <div class="contact-box">
+        <p>
+
+            <strong>Email:</strong>
+
+            <a href="mailto:YOUR_EMAIL">
+                sarithashettynitk09@gmail.com
+            </a>
+
+        </p>
 
 
-    <!-- KEEP YOUR EXISTING EMAIL -->
+        <p>
 
-    <p>
+            <strong>Phone:</strong>
 
-      <strong>Email:</strong>
+       8746065577
 
-      <a href="mailto:sarithashettynitk09@gmail.com">
-      </a>
-
-    </p>
+        </p>
 
 
-    <!-- KEEP YOUR EXISTING PHONE -->
+        <p>
 
-    <p>
+            <strong>GitHub:</strong>
 
-      <strong>Mobile:</strong>
+            <a href="https://github.com/sarithashettynitk"
+               target="_blank">
 
-      8746065577
+                github.com/sarithashettynitk
 
-    </p>
+            </a>
 
-
-    <p>
-
-      <strong>GitHub:</strong>
-
-      <a href="sarithashettynitk.github.io"
-         target="_blank">
-
-      sarithashettynitk.github.io
+        </p>
 
 
-      </a>
+        <p>
 
-    </p>
+            <strong>Location:</strong>
 
+            Karnataka, India
 
-    <p>
-
-      <strong>Location:</strong>
-
-      NIT Karnataka, India
-
-    </p>
+        </p>
 
 
-  </div>
+    </div>
 
 
 </section>
@@ -1774,20 +1862,18 @@ content="Saritha R Shetty - Assistant Programmer at NITK with 12+ years of exper
 
 <footer>
 
+    <p>
+        © 2026 Saritha R. Shetty
+    </p>
 
-  <p>
-    © 2026 Saritha R. Shetty
-  </p>
-
-
-  <p>
-    Assistant Programmer · Application Development ·
-    Academic Systems & ERP
-  </p>
-
+    <p>
+        Assistant Programmer · Academic Systems · IRIS ERP ·
+        Application Development
+    </p>
 
 </footer>
 
 
 </body>
-  </html>
+
+</html>
